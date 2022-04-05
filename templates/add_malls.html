@@ -1,0 +1,367 @@
+{% load static %} {% include "link.html" %} {% include 'header.html' %}
+<!-- End Header -->
+
+<body>
+    <section>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+
+        <h1>Add Mall details here to add in Database</h1>
+
+        <form action="add_malls" method="POST" style="margin-left: 5%;" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- name d-->
+            <div>
+                <input type="text" id="mall_name" name="mall_name" placeholder="Mall name" required/>
+            </div>
+
+            <!-- category d-->
+            <div>
+                <p>Available Category:</p>
+                <input type="hidden" name="product1" value="">
+                <input type="checkbox" id="product1" name="product1" value="TV & Home Appliances" />
+                <label for="product1">TV & Home Appliances</label>
+                <br>
+                <input type="hidden" name="product2" value="">
+                <input type="checkbox" id="product2" name="product2" value="Electronic Devices" />
+                <label for="product2">Electronic Devices</label>
+                <br>
+                <input type="hidden" name="product3" value="">
+                <input type="checkbox" id="product3" name="product3" value="Clothes & Fashion" />
+                <label for="product3">Clothes & Fashion</label>
+                <br>
+                <input type="hidden" name="product4" value="">
+                <input type="checkbox" id="product4" name="product4" value="Home & Lifestyle" />
+                <label for="product4">Home & Lifestyle</label>
+                <br>
+                <input type="hidden" name="product5" value="">
+                <input type="checkbox" id="product5" name="product5" value="Health & Beauty" />
+                <label for="product5">Health & Beauty</label>
+                <br>
+                <input type="hidden" name="product6" value="">
+                <input type="checkbox" id="product6" name="product6" value="Accessories" />
+                <label for="product6">Accessories</label>
+                <br>
+                <input type="hidden" name="product7" value="">
+                <input type="checkbox" id="product7" name="product7" value="Food court" />
+                <label for="product7">Food court</label>
+            </div>
+
+            <br>
+            <!-- links d-->
+            <div>
+                <p> All available links for malls</p>
+                <label for="link1">Website link:</label>
+                <input type="url" name="link1" id="link1" />
+                <label for="link2">Facebook Link:</label>
+                <input type="url" name="link2" id="link2" />
+
+                <label for="link3">Gmail Link:</label>
+                <input type="email" name="link3" id="link3" placeholder="example@example.com" required/>
+
+                <label for="link4">Youtube Link:</label>
+                <input type="url" name="link4" id="link4" />
+            </div>
+            <br>
+            <!-- address d-->
+            <div>
+                <p>Address:</p>
+
+                <!-- division d-->
+                <label for="division">Choose a division:</label>
+                <select name="division" id="division" required>
+                <option value="">---Choose a division---</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="khulna">Khulna</option>
+                <option value="Mymensingh">Mymensingh</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Rangpur">Rangpur</option>
+                <option value="Sylhet">Sylhet</option>
+            </select>
+                <!-- location d-->
+                <label for="location"><p>Location:</p></label>
+                <input type="text" name="location" id="location" placeholder="address" required/>
+            </div>
+
+            <br>
+            <!-- phone number d-->
+            <div>
+                <p>Phone numbers:</p>
+
+                <input type="tel" id="phone1" name="phone1">
+                <br>
+                <br>
+                <input type="tel" id="phone2" name="phone2">
+                <br>
+                <br>
+                <input type="tel" id="phone3" name="phone3">
+                <br>
+                <br>
+                <input type="tel" id="phone4" name="phone4">
+            </div>
+
+
+            <br>
+            <br>
+            <!-- images d-->
+            <div>
+                <p>Images :(note: add images agian from django admin please or image won't show up in websit)</p>
+                <h4>Image 1:</h4>
+                <input type="file" name="image_0" accept="image/*">
+                <br>
+                <h4>Image 2:</h4>
+                <input type="file" name="image_1" accept="image/*">
+                <br>
+                <h4>Image 3:</h4>
+                <input type="file" name="image_2" accept="image/*">
+                <br>
+                <h4>Image 4:</h4>
+                <input type="file" name="image_3" accept="image/*">
+                <br>
+                <h4>Image 5:</h4>
+                <input type="file" name="image_4" accept="image/*">
+                <br>
+            </div>
+
+            <br>
+            <!-- description d-->
+            <div>
+                <p>Mall description:</p>
+                <input type="text" name="mall_description" id="mall_description" placeholder="Mall Description" required/>
+            </div>
+
+            <br>
+            <!-- facility d-->
+            <div>
+                <p>Facility :</p>
+                <div class="half">
+                    <label class="half2" for="facilities_1">
+                    <input type="text" id="facilities_1" name="facilities_1" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_2">
+                    <input type="text" id="facilities_2" name="facilities_2" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_3">
+                    <input type="text" id="facilities_3" name="facilities_3" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_4">
+                    <input type="text" id="facilities_4" name="facilities_4" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_5">
+                    <input type="text" id="facilities_5" name="facilities_5" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_6">
+                    <input type="text" id="facilities_6" name="facilities_6" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_7">
+                    <input type="text" id="facilities_7" name="facilities_7" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_8">
+                    <input type="text" id="facilities_8" name="facilities_8" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_9">
+                    <input type="text" id="facilities_9" name="facilities_9" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_10">
+                    <input type="text" id="facilities_10" name="facilities_10" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_11">
+                    <input type="text" id="facilities_11" name="facilities_11" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_12">
+                    <input type="text" id="facilities_12" name="facilities_12" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_1">
+                    <input type="text" id="facilities_13" name="facilities_13" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_14">
+                    <input type="text" id="facilities_14" name="facilities_14" placeholder="example:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="facilities_15">
+                    <input type="text" id="facilities_15" name="facilities_15" placeholder="example:">
+                </label>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- floors d-->
+            <div>
+                <p>Floors :</p>
+                <div class="half">
+                    <label class="half2" for="floors_1">
+                    <input type="text" id="floors_1" name="floors_1" placeholder="Floor 0:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_2">
+                    <input type="text" id="floors_2" name="floors_2" placeholder="Floor 1:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_3">
+                    <input type="text" id="floors_3" name="floors_3" placeholder="Floor 2:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_4">
+                    <input type="text" id="floors_4" name="floors_4" placeholder="Floor 3:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_5">
+                    <input type="text" id="floors_5" name="floors_5" placeholder="Floor 4:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_6">
+                    <input type="text" id="floors_6" name="floors_6" placeholder="Floor 5:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_7">
+                    <input type="text" id="floors_7" name="floors_7" placeholder="Floor 6:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_8">
+                    <input type="text" id="floors_8" name="floors_8" placeholder="Floor 7:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_9">
+                    <input type="text" id="floors_9" name="floors_9" placeholder="Floor 8:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_10">
+                    <input type="text" id="floors_10" name="floors_10" placeholder="Floor 9:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_11">
+                    <input type="text" id="floors_11" name="floors_11" placeholder="Floor 10:">
+                </label>
+                </div>
+                <br>
+                <div class="half">
+                    <label class="half2" for="floors_12">
+                    <input type="text" id="floors_12" name="floors_12" placeholder="Floor 11:">
+                </label>
+                </div>
+            </div>
+
+            <br>
+            <input type="submit" />
+        </form>
+
+    <br><br>
+    </section>
+    {% include "footer.html" %}
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% comment %} <h1>Add shopping mall details here to add in Database</h1>
+<style>
+    h3 {
+        color: red;
+        font-style: oblique;
+    }
+</style>
+
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+
+<form action="add_malls" method="POST">
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name="username">
+    <p>Password</p>
+    <input type="password" name="password">
+    <br>
+    <br>
+    <input type="submit" />
+</form> {% endcomment %} -->

@@ -1,0 +1,611 @@
+{% load static %} {% include "link.html" %} {% include 'header.html' %}
+<!-- End Header -->
+<style>
+
+    
+    table,
+    th,
+    td {
+        border: 1px solid #DCDCDC;
+        text-align: justify;
+        padding: 5px;
+    }
+    
+    .desc {
+        margin: 5px;
+        text-align: justify;
+    }
+    img{
+        background: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #888888;
+    }
+</style>
+
+<body>
+ 
+
+    <section style="margin-bottom:-150px;">
+        <div class="container">
+            
+            {% for pk in pk %} {% if pk.brand_name == page_title %}
+            <div class="row" style="border: 1px solid #DCDCDC; margin: 5px; text-align: center;">
+                <h3>Brand Advertisement section</h3>
+            </div>
+            <div class="row" style="margin: 2px;">
+                <div class="col-lg-4 col-md-6" style="height:fit-content;">
+                    <img src="{{pk.image_0.url}}" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <h4 style="text-align: center;">{{pk.brand_name}}</h4>
+                    <hr>
+                    <h5>Available Categories:</h5>
+                    <ul>
+                        {% if pk.category_1 %}
+                        <li>{{pk.category_1}}</li>
+                        {%endif %} {% if pk.category_2 %}
+                        <li>{{pk.category_2}}</li>
+                        {%endif %} {% if pk.category_3 %}
+                        <li>{{pk.category_3}}</li>
+                        {%endif %} {% if pk.category_4 %}
+                        <li>{{pk.category_4}}</li>
+                        {%endif %} {% if pk.category_5 %}
+                        <li>{{pk.category_5}}</li>
+                        {%endif %} {% if pk.category_6 %}
+                        <li>{{pk.category_6}}</li>
+                        {%endif %} {% if pk.category_7 %}
+                        <li>{{pk.category_7}}</li>
+                        {%endif %}
+                    </ul>
+                    <div class="social">
+                        {% if pk.gmail_link %}
+                        <a href="{{pk.gmail_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if pk.facebook_link %}
+                        <a href="{{pk.facebook_link}}"><i class="bi bi-facebook"></i></a> {% else %}
+                        <a><i class="bi bi-facebook"></i></a> {%endif %} {% if pk.website_link %}
+                        <a href="{{pk.website_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if pk.other_link %}
+                        <a href="{{pk.other_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %}
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 " style="border: 1px solid #DCDCDC;height:fit-content;">
+                    <div>
+                        <h4>Shopping Malls:</h4>
+                        {% for shops in sps2 %}
+                            <div class="row highl" style="border: 1px solid #DCDCDC; margin: 2px;">
+                                    <form action="brand_details" method="POST">
+                                        {% csrf_token %}
+                                        
+                                        <h6 style="width:100%;display:inline-block; margin-top:5px;margin-bottom:-10px; color:blue;">
+                                            <input type="submit" value="{{shops.shopping_mall_name}}" name="brand_title" onMouseOver="this.style.color='#2E2EFF'"onMouseOut="this.style.color='#000'" style="border: none; background-color: transparent; color: black;" />
+                                        </h6>
+                                    </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+        <div class="container">
+            
+            {% for pk in pk %}
+                {% if pk.brand_name == page_title %}
+                <div class="row" style="border: 1px solid #DCDCDC; margin: 2px;">
+                    <h3 style="text-align:center;">Advertisement section</h3>
+                </div>
+                <div class="row"  style="margin: 1px;">
+                    <div class="col-lg-9 col-md-6">
+                        <div class="row desc" style="margin: 1px;border: 1px solid #DCDCDC;">
+                            <h4>{{pk.brand_name}} History:</h4>
+                            <p>
+                                {{pk.description}}
+                            </p>
+                        </div>
+                        <div class="row desc">
+                            <h4>Available {{pk.brand_name}} showrooms: </h4>
+                            <table style="">
+                                <tr>
+                                    <th>Showroom Description</th>
+                                    <th>Contact Details</th>
+                                </tr>
+                                {% if pk.showrooms_1 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_1}}</td>
+                                        <td>{{pk.showrooms_phone_1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_2 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_2}}</td>
+                                        <td>{{pk.showrooms_phone_2}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_3 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_3}}</td>
+                                        <td>{{pk.showrooms_phone_3}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_4 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_4}}</td>
+                                        <td>{{pk.showrooms_phone_4}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_5 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_5}}</td>
+                                        <td>{{pk.showrooms_phone_5}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_6 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_6}}</td>
+                                        <td>{{pk.showrooms_phone_6}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_7 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_7}}</td>
+                                        <td>{{pk.showrooms_phone_7}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_8 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_8}}</td>
+                                        <td>{{pk.showrooms_phone_8}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_9 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_9}}</td>
+                                        <td>{{pk.showrooms_phone_9}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_10 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_10}}</td>
+                                        <td>{{pk.showrooms_phone_10}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_11 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_11}}</td>
+                                        <td>{{pk.showrooms_phone_11}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_12 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_12}}</td>
+                                        <td>{{pk.showrooms_phone_12}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_13 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_13}}</td>
+                                        <td>{{pk.showrooms_phone_13}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_14 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_14}}</td>
+                                        <td>{{pk.showrooms_phone_14}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_15 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_15}}</td>
+                                        <td>{{pk.showrooms_phone_15}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_16 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_16}}</td>
+                                        <td>{{pk.showrooms_phone_16}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_17 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_17}}</td>
+                                        <td>{{pk.showrooms_phone_17}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_18 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_18}}</td>
+                                        <td>{{pk.showrooms_phone_18}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_19 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_19}}</td>
+                                        <td>{{pk.showrooms_phone_19}}</td>
+                                    </tr>
+                                {% endif %}
+
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+                            Reviews
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 col-md-6 " style="border: 1px solid #DCDCDC;height:fit-content ">
+                        <div>
+                            <h4>Other Brands:</h4>
+                            {% for brands in pks2 %}
+                                <div class="row highl" style="border: 1px solid 	#DCDCDC; margin: 2px;">
+                                        <form action="brand_details" method="POST">
+                                            {% csrf_token %}
+                                            
+                                            <h6 style="width:100%;display:inline-block; margin-top:5px;margin-bottom:-10px; color:blue;">
+                                                <input type="submit" value="{{brands.brand_name}}" name="brand_title" onMouseOver="this.style.color='#2E2EFF'"onMouseOut="this.style.color='#000'" style="border: none; background-color: transparent; color: black;" />
+                                            </h6>
+                                        </form>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                            <h4>Advertisement section</h4>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+            {% endfor %}
+            {% for pk in pk %}
+                {% if pk.brand_name == page_title %}
+                    <div class="row"  style="margin: 1px;">
+                        <h2>Other brands:</h2>
+                        {% for pks in pks %}
+                            <div class="col-lg-2 col-md-3 col-sm-2" style="border: 1px solid #DCDCDC; margin:5px;">
+                                <form action="brand_details" method="POST">
+                                    {% csrf_token %}
+                                    <img type="submit" src="{{pks.image_0.url}}" class="img-fluid" name="brand_title" alt="" value="{{pks.brand_name}}" style="padding-top:5%;">
+                                </form><form action="brand_details" method="POST">
+                                    {% csrf_token %}
+                                    <h4 style="text-align:center; margin-top:5px;">
+                                    <input type="submit" value="{{pks.brand_name}}" name="brand_title" style="border: none; background-color: transparent;" />
+                                    </h4>
+                                </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+    <section style="margin-bottom:-150px;">
+        <div class="container">
+            
+            {% for sp in sp %} {% if sp.shopping_mall_name == page_title %}
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+                <h3>Advertisement section</h3>
+            </div>
+            <div class="row" style="margin: 2px;">
+                <div class="col-lg-4 col-md-6" style="height:fit-content;">
+                    <img src="{{sp.image_0.url}}" class="img-fluid" alt="">
+                </div>
+    
+                <div class="col-lg-5 col-md-6">
+                    <h4 style="text-align: center;">{{sp.shopping_mall_name}}</h4>
+                    <hr>
+                    <h5>Available Categories:</h5>
+                    <ul>
+                        {% if sp.category_1 %}
+                        <li>{{sp.category_1}}</li>
+                        {%endif %} {% if sp.category_2 %}
+                        <li>{{sp.category_2}}</li>
+                        {%endif %} {% if sp.category_3 %}
+                        <li>{{sp.category_3}}</li>
+                        {%endif %} {% if sp.category_4 %}
+                        <li>{{sp.category_4}}</li>
+                        {%endif %} {% if sp.category_5 %}
+                        <li>{{sp.category_5}}</li>
+                        {%endif %} {% if sp.category_6 %}
+                        <li>{{sp.category_6}}</li>
+                        {%endif %} {% if sp.category_7 %}
+                        <li>{{sp.category_7}}</li>
+                        {%endif %}
+                    </ul>
+                    <div class="social">
+                        {% if sp.gmail_link %}
+                        <a href="{{sp.gmail_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if sp.facebook_link %}
+                        <a href="{{sp.facebook_link}}"><i class="bi bi-facebook"></i></a> {% else %}
+                        <a><i class="bi bi-facebook"></i></a> {%endif %} {% if sp.website_link %}
+                        <a href="{{sp.website_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if sp.other_link %}
+                        <a href="{{sp.other_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %}
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 " style="border: 1px solid #DCDCDC;height:fit-content;">
+                    <div>
+                        <h4>Brands:</h4>
+                        {% for brands in pks2 %}
+                            <div class="row highl" style="border: 1px solid 	#DCDCDC; margin: 2px;">
+                                    <form action="brand_details" method="POST">
+                                        {% csrf_token %}
+                                        
+                                        <h6 style="width:100%;display:inline-block; margin-top:5px;margin-bottom:-10px; color:blue;">
+                                            <input type="submit" value="{{brands.brand_name}}" name="brand_title" onMouseOver="this.style.color='#2E2EFF'"onMouseOut="this.style.color='#000'" style="border: none; background-color: transparent; color: black;" />
+                                        </h6>
+                                    </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+        <div class="container">
+            
+            {% for sp in sp %}
+                {% if sp.shopping_mall_name == page_title %}
+                <div class="row" style="border: 1px solid #DCDCDC; margin: 2px;">
+                    <h3 style="text-align:center;">Advertisement section</h3>
+                </div>
+                <div class="row"  style="margin: 1px;">
+                    <div class="col-lg-9 col-md-6">
+                        <div class="row desc"  style="margin: 1px;border: 1px solid #DCDCDC;">
+                            <h4>{{sp.shopping_mall_name}} History:</h4>
+                            <p>
+                                {{sp.description}}
+                            </p>
+                        </div>
+                        <div class="row desc">
+                            <div class="col-lg-4">
+                                <table style="">
+                                    <tr>
+                                        <th>Facilities:</th>
+                                    </tr>
+                                    {% if sp.facilities_1 %}
+                                        <tr>
+                                            <td>{{sp.facilities_1}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_2 %}
+                                        <tr>
+                                            <td>{{sp.facilities_2}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_3 %}
+                                        <tr>
+                                            <td>{{sp.facilities_3}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_4 %}
+                                        <tr>
+                                            <td>{{sp.facilities_4}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_5 %}
+                                        <tr>
+                                            <td>{{sp.facilities_5}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_6 %}
+                                        <tr>
+                                            <td>{{sp.facilities_6}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_7 %}
+                                        <tr>
+                                            <td>{{sp.facilities_7}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_8 %}
+                                        <tr>
+                                            <td>{{sp.facilities_8}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_9 %}
+                                        <tr>
+                                            <td>{{sp.facilities_9}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_10 %}
+                                        <tr>
+                                            <td>{{sp.facilities_10}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_11 %}
+                                        <tr>
+                                            <td>{{sp.facilities_11}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_12 %}
+                                        <tr>
+                                            <td>{{sp.facilities_12}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_13 %}
+                                        <tr>
+                                            <td>{{sp.facilities_13}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_14 %}
+                                        <tr>
+                                            <td>{{sp.facilities_14}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.facilities_15 %}
+                                        <tr>
+                                            <td>{{sp.facilities_15}}</td>
+                                        </tr>
+                                    {% endif %}
+        
+                                </table>
+                            </div>
+                            <div class="col-lg-8">
+                                <table style="">
+                                    <tr>
+                                        <th>Floor: </th>
+                                        <th>Available Categories</th>
+                                    </tr>
+                                    {% if sp.floors_1 %}
+                                        <tr>
+                                            <td>Floors 1</td>
+                                            <td>{{sp.floors_1}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_2 %}
+                                        <tr>
+                                            <td>Floors 2</td>
+                                            <td>{{sp.floors_2}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_3 %}
+                                        <tr>
+                                            <td>Floors 3</td>
+                                            <td>{{sp.floors_3}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_4 %}
+                                        <tr>
+                                            <td>Floors 4</td>
+                                            <td>{{sp.floors_4}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_5 %}
+                                        <tr>
+                                            <td>Floors 5</td>
+                                            <td>{{sp.floors_5}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_5 %}
+                                        <tr>
+                                            <td>Floors 5</td>
+                                            <td>{{sp.floors_5}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_6 %}
+                                        <tr>
+                                            <td>Floors 6</td>
+                                            <td>{{sp.floors_6}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_7 %}
+                                        <tr>
+                                            <td>Floors 7</td>
+                                            <td>{{sp.floors_7}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_8 %}
+                                        <tr>
+                                            <td>Floors 8</td>
+                                            <td>{{sp.floors_8}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_9 %}
+                                        <tr>
+                                            <td>Floors 9</td>
+                                            <td>{{sp.floors_9}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_10 %}
+                                        <tr>
+                                            <td>Floors 10</td>
+                                            <td>{{sp.floors_10}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_11 %}
+                                        <tr>
+                                            <td>Floors 11</td>
+                                            <td>{{sp.floors_11}}</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if sp.floors_12 %}
+                                        <tr>
+                                            <td>Floors 12</td>
+                                            <td>{{sp.floors_12}}</td>
+                                        </tr>
+                                    {% endif %}
+        
+                                </table>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+    
+                        </div>
+                        <div class="row">
+    
+                        </div>
+                        <div class="row">
+                            Reviews
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 col-md-6 " style="border: 1px solid #DCDCDC;height:fit-content ">
+                        <div>
+                            <h4>Shopping Malls:</h4>
+                            {% for shops in sps2 %}
+                                <div class="row highl" style="border: 1px solid #DCDCDC; margin: 2px;">
+                                        <form action="brand_details" method="POST">
+                                            {% csrf_token %}
+                                            
+                                            <h6 style="width:100%;display:inline-block; margin-top:5px;margin-bottom:-10px; color:blue;">
+                                                <input type="submit" value="{{shops.shopping_mall_name}}" name="brand_title" onMouseOver="this.style.color='#2E2EFF'"onMouseOut="this.style.color='#000'" style="border: none; background-color: transparent; color: black;" />
+                                            </h6>
+                                        </form>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                            <h4>Advertisement section</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                {% endif %}
+            {% endfor %}
+            {% for sp in sp %}
+                {% if sp.shopping_mall_name == page_title %}
+                    <div class="row"  style="margin: 1px;">
+                        <h2>Other Shopping Malls:</h2>
+                        {% for sps in sps %}
+                            <div class="col-lg-2 col-md-3 col-sm-2" style="border: 1px solid #DCDCDC; margin:5px;">
+                                <form action="brand_details" method="POST" style="">
+                                    {% csrf_token %}
+                                    <img src="{{sps.image_0.url}}" class="img-fluid" name="brand_title" alt=""style="padding-top:5%;">
+                                </form><form action="brand_details" method="POST">
+                                    {% csrf_token %}
+                                    <h5 style=" margin-top:5px;">
+                                    <input type="submit" value="{{sps.shopping_mall_name}}" name="brand_title" style="border: border: 1px solid #DCDCDC;width:200px; background-color: transparent;" />
+                                    </h5>
+                                </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+    
+        </div>
+    </section>
+
+    <div class="row" style="border: 1px solid #DCDCDC; margin: 2px; margin-top:75px;">
+        <h3 style="text-align:center;">Advertisement section</h3>
+    </div>
+
+    {% include "footer.html " %}
+
+</body>

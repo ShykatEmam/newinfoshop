@@ -1,0 +1,279 @@
+{% load static %} {% include "link.html" %} {% include 'header.html' %}
+<!-- End Header -->
+<style>
+    body {
+        background-color: rgb(184, 194, 230);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+    
+    .desc {
+        border: 1px solid rgba(0, 0, 0, 0.267);
+        margin: 5px;
+        text-align: justify;
+    }
+</style>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+                <h3>mall Advertisement section</h3>
+            </div>
+            {% for pk in pk %} {% if pk.brand_name == page_title %}
+            <div class="row" style="margin: 2px;">
+                <div class="col-lg-4 col-md-6" style="border: 1px solid black; height:fit-content;">
+                    <img src="{{pk.image_0.url}}" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <h4 style="text-align: center;">{{pk.brand_name}}</h4>
+                    <hr>
+                    <h5>Available Categories:</h5>
+                    <ul>
+                        {% if pk.category_1 %}
+                        <li>{{pk.category_1}}</li>
+                        {%endif %} {% if pk.category_2 %}
+                        <li>{{pk.category_2}}</li>
+                        {%endif %} {% if pk.category_3 %}
+                        <li>{{pk.category_3}}</li>
+                        {%endif %} {% if pk.category_4 %}
+                        <li>{{pk.category_4}}</li>
+                        {%endif %} {% if pk.category_5 %}
+                        <li>{{pk.category_5}}</li>
+                        {%endif %} {% if pk.category_6 %}
+                        <li>{{pk.category_6}}</li>
+                        {%endif %} {% if pk.category_7 %}
+                        <li>{{pk.category_7}}</li>
+                        {%endif %}
+                    </ul>
+                    <div class="social">
+                        {% if pk.gmail_link %}
+                        <a href="{{pk.gmail_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if pk.facebook_link %}
+                        <a href="{{pk.facebook_link}}"><i class="bi bi-facebook"></i></a> {% else %}
+                        <a><i class="bi bi-facebook"></i></a> {%endif %} {% if pk.website_link %}
+                        <a href="{{pk.website_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if pk.other_link %}
+                        <a href="{{pk.other_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                        <a><i class="bi bi-linkedin"></i></a> {%endif %}
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 " style="border: 1px solid black;height:fit-content;">
+                    <div>
+                        <h4>Related Shops: </h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+        <div class="container">
+            <div class="row" style="border: 1px solid black; margin: 2px;">
+                <h3 style="text-align:center;">Advertisement section</h3>
+            </div>
+            {% for pk in pk %}
+                {% if pk.brand_name == page_title %}
+                <div class="row"  style="margin: 1px;">
+                    <div class="col-lg-9 col-md-6">
+                        <div class="row desc">
+                            <h4>{{pk.brand_name}} History:</h4>
+                            <p>
+                                {{pk.description}}
+                            </p>
+                        </div>
+                        <div class="row desc">
+                            <h4>Available {{pk.brand_name}} showrooms: </h4>
+                            <table style="">
+                                <tr>
+                                    <th>Showroom Description</th>
+                                    <th>Contact Details</th>
+                                </tr>
+                                {% if pk.showrooms_1 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_1}}</td>
+                                        <td>{{pk.showrooms_phone_1}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_2 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_2}}</td>
+                                        <td>{{pk.showrooms_phone_2}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_3 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_3}}</td>
+                                        <td>{{pk.showrooms_phone_3}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_4 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_4}}</td>
+                                        <td>{{pk.showrooms_phone_4}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_5 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_5}}</td>
+                                        <td>{{pk.showrooms_phone_5}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_6 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_6}}</td>
+                                        <td>{{pk.showrooms_phone_6}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_7 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_7}}</td>
+                                        <td>{{pk.showrooms_phone_7}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_8 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_8}}</td>
+                                        <td>{{pk.showrooms_phone_8}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_9 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_9}}</td>
+                                        <td>{{pk.showrooms_phone_9}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_10 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_10}}</td>
+                                        <td>{{pk.showrooms_phone_10}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_11 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_11}}</td>
+                                        <td>{{pk.showrooms_phone_11}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_12 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_12}}</td>
+                                        <td>{{pk.showrooms_phone_12}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_13 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_13}}</td>
+                                        <td>{{pk.showrooms_phone_13}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_14 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_14}}</td>
+                                        <td>{{pk.showrooms_phone_14}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_15 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_15}}</td>
+                                        <td>{{pk.showrooms_phone_15}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_16 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_16}}</td>
+                                        <td>{{pk.showrooms_phone_16}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_17 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_17}}</td>
+                                        <td>{{pk.showrooms_phone_17}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_18 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_18}}</td>
+                                        <td>{{pk.showrooms_phone_18}}</td>
+                                    </tr>
+                                {% endif %}
+                                {% if pk.showrooms_19 %}
+                                    <tr>
+                                        <td>{{pk.showrooms_19}}</td>
+                                        <td>{{pk.showrooms_phone_19}}</td>
+                                    </tr>
+                                {% endif %}
+
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+                            Reviews
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 col-md-6 " style="border: 1px solid black;height:fit-content ">
+                        <div>
+                            <h4>Related brands:</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right "></i> <a href="# ">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right "></i> <a href="# ">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right "></i> <a href="# ">Graphic Design</a></li>
+                            </ul>
+                        </div>
+                        <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                            <h4>Advertisement section</h4>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+            {% endfor %}
+            <div class="row"  style="margin: 1px;">
+                <h2>Other brands:</h2>
+                {% for pks in pks %}
+                    <div class="col-lg-2 col-md-6" style="border: 1px solid black; margin:5px;">
+                        <form action="brand_details" method="POST">
+                            {% csrf_token %}
+                            <img type="submit" src="{{pks.image_0.url}}" class="img-fluid" name="brand_title" alt="" value="{{pks.brand_name}}" style="padding-top:5%;">
+                        </form><form action="brand_details" method="POST">
+                            {% csrf_token %}
+                            <h4 style="text-align:center; margin-top:5px;">
+                            <input type="submit" value="{{pks.brand_name}}" name="brand_title" style="border: none; background-color: transparent;" />
+                            </h4>
+                        </form>
+                    </div>
+                {% endfor %}
+                
+            </div>
+
+        </div>
+    </section>
+    <div class="row" style="border: 1px solid black; margin: 2px;">
+        <h3 style="text-align:center;">Advertisement section</h3>
+    </div>
+
+    {% include "footer.html " %}
+
+</body>

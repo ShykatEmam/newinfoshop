@@ -1,0 +1,1252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>	
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/chosen.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/color-01.css' %}">
+</head>
+<body class="home-page home-01 ">
+
+	<!-- mobile menu -->
+    <div class="mercado-clone-wrap">
+        <div class="mercado-panels-actions-wrap">
+            <a class="mercado-close-btn mercado-close-panels" href="#">x</a>
+        </div>
+        <div class="mercado-panels"></div>
+    </div>
+
+	<!--header-->
+	<header id="header" class="header header-style-1">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="topbar-menu-area">
+					<div class="container">
+						<div class="topbar-menu left-menu">
+							<ul>
+								<li class="menu-item" >
+									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+								</li>
+							</ul>
+						</div>
+						<div class="topbar-menu right-menu">
+							<ul>
+								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
+								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="mid-section main-info-area">
+
+						<div class="wrap-logo-top left-section">
+							<a href="index.html" class="link-to-home"><img src="{% static 'assets/images/logo-top-1.png' %}" alt="mercado"></a>
+						</div>
+
+						<div class="wrap-search center-section">
+							<div class="wrap-search-form">
+								<form action="#" id="form-search-top" name="form-search-top">
+									<input type="text" name="search" value="" placeholder="Search here...">
+									<button form="form-search-top" type="button"><i class="fa fa-search" aria-hidden="true">Search....</i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-section header-sticky">
+
+
+					<div class="primary-nav-section">
+						<div class="container">
+							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
+								<li class="menu-item home-icon">
+									<a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+								</li>
+								<li class="menu-item">
+									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
+								</li>
+								<li class="menu-item">
+									<a href="shop.html" class="link-term mercado-item-title">Shopping Malls</a>
+								</li>
+								<li class="menu-item">
+									<a href="brands.html" class="link-term mercado-item-title">Brands</a>
+								</li>
+								<li class="menu-item">
+									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main area -->
+	<main id="main">
+		<div class="container" style="width: 80%;">
+			<!--MAIN SLIDE-->
+			<div class="wrap-main-slide">
+				<div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
+					<div class="item-slide">
+						<img src="{% static 'assets/images/main-slider-1-1.jpg' %}" alt="" class="img-slide">
+						<div class="slide-info slide-1">
+						</div>
+					</div>
+					<div class="item-slide">
+						<img src="{% static 'assets/images/main-slider-1-2.jpg' %}" alt="" class="img-slide">
+						<div class="slide-info slide-2">
+							<h2 class="f-title">Extra 25% Off</h2>
+							<span class="f-subtitle">On online payments</span>
+							<p class="discount-code">Use Code: #FA6868</p>
+							<h4 class="s-title">Get Free</h4>
+							<p class="s-subtitle">TRansparent Bra Straps</p>
+						</div>
+					</div>
+					<div class="item-slide">
+						<img src="{% static 'assets/images/main-slider-1-3.jpg' %}" alt="" class="img-slide">
+						<div class="slide-info slide-3">
+							<h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
+							<span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
+							<p class="sale-info">Stating at: <b class="price">$225.00</b></p>
+							<a href="#" class="btn-link">Shop Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--BANNER-->
+			<div class="wrap-banner style-twin-default">
+				<div class="banner-item">
+					<a href="#" class="link-banner banner-effect-1">
+						<figure><img src="{% static 'assets/images/home-1-banner-1.jpg' %}" alt="" width="580" height="190"></figure>
+					</a>
+				</div>
+				<div class="banner-item">
+					<a href="#" class="link-banner banner-effect-1">
+						<figure><img src="{% static 'assets/images/home-1-banner-2.jpg' %}" alt="" width="580" height="190"></figure>
+					</a>
+				</div>
+			</div>
+
+			<!--On Sale-->
+			<div class="wrap-show-advance-info-box style-1 has-countdown" style="width: 100%;">
+				<h3 class="title-box">On Sale</h3>
+				<div class="wrap-countdown mercado-countdown" data-expire="2020/12/12 12:34:56"></div>
+				<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container " data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/tools_equipment_7.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/digital_18.jpg' %}" width="800" height="800" alt=""></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/fashion_08.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/digital_17.jpg' %}" width="800" height="800" alt=""></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/tools_equipment_3.jpg' %}" width="800" height="800" alt=""></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/fashion_05.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/digital_04.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+					<div class="product product-style-2 equal-elem ">
+						<div class="product-thumnail">
+							<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+								<figure><img src="{% static 'assets/images/products/kidtoy_05.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+							</a>
+							<div class="group-flash">
+								<span class="flash-item sale-label">sale</span>
+							</div>
+							<div class="wrap-btn">
+								<a href="#" class="function-link">quick view</a>
+							</div>
+						</div>
+						<div class="product-info">
+							<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- adveritse -->
+			<div class="wrap-top-banner" style="border: 1px solid gray; margin-top: 5px; height: 100px;">
+				<h2>Advertisement</h2>
+			</div>
+
+			<!--Product Categories-->
+			<div class="wrap-show-advance-info-box style-1">
+				<h3 class="title-box">Popular Shop By Areas</h3>
+				
+				<div class="wrap-products">
+					<div class="wrap-product-tab tab-style-1">
+						<div class="tab-control">
+							<a href="#p_s_dhaka" class="tab-control-item active">Dhaka</a>
+							<a href="#p_s_barishal" class="tab-control-item">Barishal</a>
+							<a href="#p_s_chattogram" class="tab-control-item">Chattogram</a>
+							<a href="#p_s_rajshahi" class="tab-control-item">Rajshahi</a>
+							<a href="#p_s_rangpur" class="tab-control-item">Rangpur</a>
+							<a href="#p_s_mymensingh" class="tab-control-item">Mymensingh</a>
+							<a href="#p_s_sylhet" class="tab-control-item">Sylhet</a>
+						</div>
+						<div class="tab-contents">
+
+							<div class="tab-content-item active" id="p_s_dhaka">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Bashundhara">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Bashundhara/1.jpg' %}" width="800" height="800" alt="Bashundhara"></figure>
+											</a>
+											
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Bashundhara</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Eastern Plaza">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Eastern Plaza/1.jpg' %}" width="800" height="800" alt="Eastern Plaza"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Eastern Plaza</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Jamuna Future Park">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Jamuna Future Park/1.jpg' %}" width="800" height="800" alt="Jamuna Future Park"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Jamuna Future Park</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+									<div class="product-thumnail">
+										<a href="detail.html" title="Mascot Plaza">
+											<figure><img src="{% static 'assets/images/Shopping Malls/Mascot Plaza/1.jpg' %}" width="800" height="800" alt="Mascot Plaza"></figure>
+										</a>
+										<div class="group-flash">
+											<span class="flash-item new-label">new</span>
+											<span class="flash-item sale-label">sale</span>
+										</div>
+										<div class="wrap-btn">
+											<a href="#" class="function-link">quick view</a>
+										</div>
+									</div>
+									<div class="product-info">
+										<a href="#" class="product-name"><span style="text-align: center;"><h4>Mascot Plaza</h4></span></a>
+									</div>
+								</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Metro Shopping Center">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Metro Shopping Center/1.jpg' %}" width="800" height="800" alt="Metro Shopping Center"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Metro Shopping Center</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Pink City">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Pink City/1.jpg' %}" width="800" height="800" alt="Pink City"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Pink City</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="New Market">
+												<figure><img src="{% static 'assets/images/Shopping Malls/New Market/1.jpg' %}" width="800" height="800" alt="New Market"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item new-label">new</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>New Market</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Shimanto Square/1.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Shimanto Square</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="tab-content-item" id="p_s_barishal">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Bashundhara">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Bashundhara/1.jpg' %}" width="800" height="800" alt="Bashundhara"></figure>
+											</a>
+											
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Bashundhara</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Eastern Plaza">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Eastern Plaza/1.jpg' %}" width="800" height="800" alt="Eastern Plaza"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Eastern Plaza</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Jamuna Future Park">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Jamuna Future Park/1.jpg' %}" width="800" height="800" alt="Jamuna Future Park"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Jamuna Future Park</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+									<div class="product-thumnail">
+										<a href="detail.html" title="Mascot Plaza">
+											<figure><img src="{% static 'assets/images/Shopping Malls/Mascot Plaza/1.jpg' %}" width="800" height="800" alt="Mascot Plaza"></figure>
+										</a>
+										<div class="group-flash">
+											<span class="flash-item new-label">new</span>
+											<span class="flash-item sale-label">sale</span>
+										</div>
+										<div class="wrap-btn">
+											<a href="#" class="function-link">quick view</a>
+										</div>
+									</div>
+									<div class="product-info">
+										<a href="#" class="product-name"><span style="text-align: center;"><h4>Mascot Plaza</h4></span></a>
+									</div>
+								</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Metro Shopping Center">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Metro Shopping Center/1.jpg' %}" width="800" height="800" alt="Metro Shopping Center"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Metro Shopping Center</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Pink City">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Pink City/1.jpg' %}" width="800" height="800" alt="Pink City"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Pink City</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="New Market">
+												<figure><img src="{% static 'assets/images/Shopping Malls/New Market/1.jpg' %}" width="800" height="800" alt="New Market"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item new-label">new</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>New Market</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Shimanto Square/1.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Shimanto Square</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="tab-content-item" id="p_s_chattogram">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Bashundhara">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Bashundhara/1.jpg' %}" width="800" height="800" alt="Bashundhara"></figure>
+											</a>
+											
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Bashundhara</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Eastern Plaza">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Eastern Plaza/1.jpg' %}" width="800" height="800" alt="Eastern Plaza"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Eastern Plaza</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Jamuna Future Park">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Jamuna Future Park/1.jpg' %}" width="800" height="800" alt="Jamuna Future Park"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Jamuna Future Park</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+									<div class="product-thumnail">
+										<a href="detail.html" title="Mascot Plaza">
+											<figure><img src="{% static 'assets/images/Shopping Malls/Mascot Plaza/1.jpg' %}" width="800" height="800" alt="Mascot Plaza"></figure>
+										</a>
+										<div class="group-flash">
+											<span class="flash-item new-label">new</span>
+											<span class="flash-item sale-label">sale</span>
+										</div>
+										<div class="wrap-btn">
+											<a href="#" class="function-link">quick view</a>
+										</div>
+									</div>
+									<div class="product-info">
+										<a href="#" class="product-name"><span style="text-align: center;"><h4>Mascot Plaza</h4></span></a>
+									</div>
+								</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Metro Shopping Center">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Metro Shopping Center/1.jpg' %}" width="800" height="800" alt="Metro Shopping Center"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Metro Shopping Center</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Pink City">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Pink City/1.jpg' %}" width="800" height="800" alt="Pink City"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Pink City</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="New Market">
+												<figure><img src="{% static 'assets/images/Shopping Malls/New Market/1.jpg' %}" width="800" height="800" alt="New Market"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item new-label">new</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>New Market</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Shimanto Square/1.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Shimanto Square</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="tab-content-item" id="p_s_rajshahi">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Bashundhara">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Bashundhara/1.jpg' %}" width="800" height="800" alt="Bashundhara"></figure>
+											</a>
+											
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Bashundhara</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Eastern Plaza">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Eastern Plaza/1.jpg' %}" width="800" height="800" alt="Eastern Plaza"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Eastern Plaza</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Jamuna Future Park">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Jamuna Future Park/1.jpg' %}" width="800" height="800" alt="Jamuna Future Park"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Jamuna Future Park</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+									<div class="product-thumnail">
+										<a href="detail.html" title="Mascot Plaza">
+											<figure><img src="{% static 'assets/images/Shopping Malls/Mascot Plaza/1.jpg' %}" width="800" height="800" alt="Mascot Plaza"></figure>
+										</a>
+										<div class="group-flash">
+											<span class="flash-item new-label">new</span>
+											<span class="flash-item sale-label">sale</span>
+										</div>
+										<div class="wrap-btn">
+											<a href="#" class="function-link">quick view</a>
+										</div>
+									</div>
+									<div class="product-info">
+										<a href="#" class="product-name"><span style="text-align: center;"><h4>Mascot Plaza</h4></span></a>
+									</div>
+								</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Metro Shopping Center">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Metro Shopping Center/1.jpg' %}" width="800" height="800" alt="Metro Shopping Center"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Metro Shopping Center</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="Pink City">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Pink City/1.jpg' %}" width="800" height="800" alt="Pink City"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Pink City</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="New Market">
+												<figure><img src="{% static 'assets/images/Shopping Malls/New Market/1.jpg' %}" width="800" height="800" alt="New Market"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item new-label">new</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>New Market</h4></span></a>
+										</div>
+									</div>
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/Shopping Malls/Shimanto Square/1.jpg' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Shimanto Square</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- adveritse -->
+			<div class="wrap-top-banner" style="border: 1px solid gray; margin-top: 5px; height: 100px;">
+				<h2>Advertisement</h2>
+				
+			</div>
+
+			<!--Product Categories-->
+			<div class="wrap-show-advance-info-box style-1">
+				<h3 class="title-box">Popular Brands By Categories</h3>
+				<div class="wrap-products">
+					<div class="wrap-product-tab tab-style-1">
+						<div class="tab-control">
+							<a href="#p_b_electornics" class="tab-control-item active">Electornics</a>
+							<a href="#p_b_clothes" class="tab-control-item">Clothes</a>
+							<a href="#p_b_chattogram" class="tab-control-item">Home Appliances</a>
+							<a href="#p_b_tools" class="tab-control-item">Tools & Equipments</a>
+							<a href="#p_b_kids" class="tab-control-item">Kid's Toys</a>
+							<a href="#p_b_organic" class="tab-control-item">Organic & Spa</a>
+						</div>
+						<div class="tab-contents">
+
+							<div class="tab-content-item active" id="p_b_electornics">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Apple.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+											
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name" ><span style="text-align: center;"><h4>Apple</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Asus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Asus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Oneplus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Oneplus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Apple.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Apple</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Asus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Asus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Oneplus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Oneplus</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="tab-content-item" id="p_b_clothes">
+								<div class="wrap-products slide-carousel owl-carousel style-nav-1 equal-container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}' >
+
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Apple.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Apple</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Asus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Asus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Oneplus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Oneplus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Apple.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Apple</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Asus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item sale-label">sale</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Asus</h4></span></a>
+										</div>
+									</div>
+									<div class="product product-style-2 equal-elem ">
+										<div class="product-thumnail">
+											<a href="detail.html" title="T-Shirt Raw Hem Organic Boro Constrast Denim">
+												<figure><img src="{% static 'assets/images/brand/Mobile/Oneplus.png' %}" width="800" height="800" alt="T-Shirt Raw Hem Organic Boro Constrast Denim"></figure>
+											</a>
+											<div class="group-flash">
+												<span class="flash-item bestseller-label">Bestseller</span>
+											</div>
+											<div class="wrap-btn">
+												<a href="#" class="function-link">quick view</a>
+											</div>
+										</div>
+										<div class="product-info">
+											<a href="#" class="product-name"><span style="text-align: center;"><h4>Oneplus</h4></span></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<!--footer area-->
+	<footer id="footer">
+		<div class="wrap-footer-content footer-style-1">
+
+			<div class="wrap-function-info">
+				<div class="container">
+					<ul>
+
+						<li class="fc-info-item">
+							<i class="fa fa-life-ring" aria-hidden="true"></i>
+							<div class="wrap-left-info">
+								<h4 class="fc-name">Online Suport</h4>
+								<p class="fc-desc">We Have Support 24/7</p>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--End function info-->
+
+			<div class="main-footer-content">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+							<div class="wrap-footer-item">
+								<h3 class="item-header">Contact Details</h3>
+								<div class="item-content">
+									<div class="wrap-contact-detail">
+										<ul>
+											<li>
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+												<p class="contact-txt">F Haque Tower, Level-7, 107 Bir Uttam C.R Datta Road</p>
+											</li>
+											<li>
+												<i class="fa fa-phone" aria-hidden="true"></i>
+												<p class="contact-txt">(+880)-2-967-3851</p>
+											</li>
+											<li>
+												<i class="fa fa-envelope" aria-hidden="true"></i>
+												<p class="contact-txt">office@bdmall.com</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+
+							<div class="wrap-footer-item">
+								<h3 class="item-header">Hot Line</h3>
+								<div class="item-content">
+									<div class="wrap-hotline-footer">
+										<span class="desc">Call Us toll Free</span>
+										<b class="phone-number">(+880)-2-967-3851</b>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
+							<div class="row">
+								<div class="wrap-footer-item twin-item">
+									<h3 class="item-header">My Account</h3>
+									<div class="item-content">
+										<div class="wrap-vertical-nav">
+											<ul>
+												<li class="menu-item"><a href="account.html" class="link-term">My Account</a></li>
+												<li class="menu-item"><a href="brands.html" class="link-term">Brands</a></li>
+												<li class="menu-item"><a href="shop.html" class="link-term">Shopping Malls</a></li>
+												<li class="menu-item"><a href="index2.html" class="link-term">Favourites</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="wrap-footer-item twin-item">
+									<h3 class="item-header">Infomation</h3>
+									<div class="item-content">
+										<div class="wrap-vertical-nav">
+											<ul>
+												<li class="menu-item"><a href="contact-us.html" class="link-term">Contact Us</a></li>
+												<li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+					</div>
+				</div>
+
+				<div class="wrap-back-link">
+					<div class="container">
+						<div class="back-link-box">
+							<h3 class="backlink-title">Quick Links</h3>
+							<div class="back-link-row">
+								<ul class="list-back-link" >
+									<li><span class="row-title">Shopping Malls:</span></li>
+									<li><a href="#" class="redirect-back-link" title="mobile">Bashundhara Shopping Malls</a></li>
+									<li><a href="#" class="redirect-back-link" title="yphones">IDB Bhaban</a></li>
+									<li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Jamuna Future Park</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">New Market Dhaka</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Viva">Police Plaza Concord</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Intex">Metro Shopping Mall</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Shimanto Square</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Mascot Plaza</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Rapa Plaza</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Lenova">Eastern Plaza</a></li>
+								</ul>
+								<ul class="list-back-link" >
+									<li><span class="row-title">Brands:</span></li>
+									<li><a href="#" class="redirect-back-link" title="mobile">Apple</a></li>
+									<li><a href="#" class="redirect-back-link" title="yphones">Asus</a></li>
+									<li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Nokia</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Samsung</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Viva">Arong</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Intex">Bata</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Walton</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Razer</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Intel</a></li>
+									<li><a href="#" class="redirect-back-link" title="Mobiles Lenova">AMD</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="coppy-right-box">
+				<div class="container">
+					<div class="coppy-right-item item-left">
+						<p class="coppy-right-text">Copyright © 2021 BD MAlls. All rights reserved</p>
+					</div>
+					<div class="coppy-right-item item-right">
+						<div class="wrap-nav horizontal-nav">
+							<ul>
+								<li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>
+								<li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a></li>
+								<li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms & Conditions</a></li>
+								<li class="menu-item"><a href="return-policy.html" class="link-term">Return Policy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="{% static 'assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4' %}"></script>
+	<script src="{% static 'assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.flexslider.js' %}"></script>
+	<script src="{% static 'assets/js/chosen.jquery.min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+	<script src="{% static 'assets/js/functions.js' %}"></script>
+</body>
+</html>

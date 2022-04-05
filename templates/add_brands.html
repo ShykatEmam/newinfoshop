@@ -1,0 +1,279 @@
+{% load static %}
+{% include "link.html" %}
+{% include "header.html" %}
+<!-- End Header -->
+
+<body>
+    <section>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+    <h1>Add Brand details here to add in Database</h1>
+
+    <form action="add_brands" method="POST" style="margin-left: 5%;">
+        {% csrf_token %}
+        <!-- name -->
+        <div>
+            <input type="text" id="brand_name" name="brand_name" placeholder="Brand Name" required/>
+        </div>
+
+        <!-- category -->
+        <div>
+            <p>Available Category:</p>
+            <input type="hidden" name="category_1" value="">
+            <input type="checkbox" id="category_1" name="category_1" value="TV & Home Appliances" />
+            <label for="category_1">TV & Home Appliances</label>
+            <br>
+            <input type="hidden" name="category_2" value="">
+            <input type="checkbox" id="category_2" name="category_2" value="Electronic Devices" />
+            <label for="category_2">Electronic Devices</label>
+            <br>
+            <input type="hidden" name="category_3" value="">
+            <input type="checkbox" id="category_3" name="category_3" value="Clothes & Fashion" />
+            <label for="category_3">Clothes & Fashion</label>
+            <br>
+            <input type="hidden" name="category_4" value="">
+            <input type="checkbox" id="category_4" name="category_4" value="Home & Lifestyle" />
+            <label for="category_4">Home & Lifestyle</label>
+            <br>
+            <input type="hidden" name="category_5" value="">
+            <input type="checkbox" id="category_5" name="category_5" value="Health & Beauty" />
+            <label for="category_5">Health & Beauty</label>
+            <br>
+            <input type="hidden" name="category_6" value="">
+            <input type="Checkbox" id="category_6" name="category_6" value="Accessories" />
+            <label for="category_6">Accessories</label>
+            <br>
+            <input type="hidden" name="category_7" value="">
+            <input type="checkbox" id="category_7" name="category_7" value="Food court" />
+            <label for="category_7">Others</label>
+        </div>
+
+        <br>
+        <!-- links -->
+        <div>
+            <p> All available links for malls</p>
+            <label for="link1">Website link:</label>
+            <input type="url" name="link1" id="link1" />
+            <label for="link2">Facebook Link:</label>
+            <input type="url" name="link2" id="link2" />
+
+            <label for="link3">Gmail Link:</label>
+            <input type="email" name="link3" id="link3" placeholder="example@example.com" required/>
+
+            <label for="link4">Youtube Link:</label>
+            <input type="url" name="link4" id="link4" />
+        </div>
+        <br>
+
+
+        <br>
+        <!-- show rooms -->
+        <div>
+            <p>Showrooms :</p>
+            <div class="half">
+                <label class="half2" for="showrooms_1">
+                    <input type="text" id="showrooms_1" name="showrooms_1" placeholder="1. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_1" name="showrooms_phone_1" placeholder="1. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_2">
+                    <input type="text" id="showrooms_2" name="showrooms_2" placeholder="2. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_2" name="showrooms_phone_2" placeholder="2. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_3">
+                    <input type="text" id="showrooms_3" name="showrooms_3" placeholder="3. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_3" name="showrooms_phone_3" placeholder="3. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_4">
+                    <input type="text" id="showrooms_4" name="showrooms_4" placeholder="4. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_4" name="showrooms_phone_4" placeholder="4. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_5">
+                    <input type="text" id="showrooms_5" name="showrooms_5" placeholder="5. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_5" name="showrooms_phone_5" placeholder="5. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_6">
+                    <input type="text" id="showrooms_6" name="showrooms_6" placeholder="6. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_6" name="showrooms_phone_6" placeholder="6. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_7">
+                    <input type="text" id="showrooms_7" name="showrooms_7" placeholder="7. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_7" name="showrooms_phone_7" placeholder="7. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_8">
+                    <input type="text" id="showrooms_8" name="showrooms_8" placeholder="8. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_8" name="showrooms_phone_8" placeholder="8. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_9">
+                    <input type="text" id="showrooms_9" name="showrooms_9" placeholder="9. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_9" name="showrooms_phone_9" placeholder="9. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_10">
+                    <input type="text" id="showrooms_10" name="showrooms_10" placeholder="10. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_10" name="showrooms_phone_10" placeholder="10. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_11">
+                    <input type="text" id="showrooms_11" name="showrooms_11" placeholder="11. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_11" name="showrooms_phone_11" placeholder="11. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_12">
+                    <input type="text" id="showrooms_12" name="showrooms_12" placeholder="12. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_12" name="showrooms_phone_12" placeholder="12. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_13">
+                    <input type="text" id="showrooms_13" name="showrooms_13" placeholder="13. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_13" name="showrooms_phone_13" placeholder="13. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_14">
+                    <input type="text" id="showrooms_14" name="showrooms_14" placeholder="14. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_14" name="showrooms_phone_14" placeholder="14. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_15">
+                    <input type="text" id="showrooms_15" name="showrooms_15" placeholder="15. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_15" name="showrooms_phone_15" placeholder="15. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_16">
+                    <input type="text" id="showrooms_16" name="showrooms_16" placeholder="16. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_16" name="showrooms_phone_16" placeholder="16. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_17">
+                    <input type="text" id="showrooms_17" name="showrooms_17" placeholder="17. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_17" name="showrooms_phone_17" placeholder="17. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_18">
+                    <input type="text" id="showrooms_18" name="showrooms_18" placeholder="18. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_18" name="showrooms_phone_18" placeholder="18. Phone :">
+            </div>
+            <br>
+            <div class="half">
+                <label class="half2" for="showrooms_19">
+                    <input type="text" id="showrooms_19" name="showrooms_19" placeholder="19. Mall name, Full address.">
+                </label>
+                <input class="half2" type="tel" id="showrooms_phone_19" name="showrooms_phone_19" placeholder="19. Phone :">
+            </div>
+            <br>
+        </div>
+
+
+        <br>
+        <br>
+        <!-- images -->
+        <div>
+            <p>Images :(note: add images agian from django admin please or image won't show up in websit)</p>
+            <h4>Image 1:</h4>
+            <input type="file" name="image_0" accept="image/*" required>
+            <br>
+            <h4>Image 2:</h4>
+            <input type="file" name="image_1" accept="image/*">
+            <br>
+            <h4>Image 3:</h4>
+            <input type="file" name="image_2" accept="image/*">
+            <br>
+            <h4>Image 4:</h4>
+            <input type="file" name="image_3" accept="image/*">
+            <br>
+            <h4>Image 5:</h4>
+            <input type="file" name="image_4" accept="image/*">
+            <br>
+        </div>
+
+        <br>
+        <!-- description -->
+        <div>
+            <p>Brand description:</p>
+            <input type="text" name="description" id="description" placeholder="Brand Description" required/>
+        </div>
+
+        <br>
+
+        <br>
+        <input type="submit" />
+    </form>
+
+    <br><br>
+    </section>
+    {% include "footer.html" %}
+</body>
+
+
+
+
+
+
+
+
+
+<!-- {% comment %} <h1>Add shopping mall details here to add in Database</h1>
+<style>
+    h3 {
+        color: red;
+        font-style: oblique;
+    }
+</style>
+
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+
+<form action="add_malls" method="POST">
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name="username">
+    <p>Password</p>
+    <input type="password" name="password">
+    <br>
+    <br>
+    <input type="submit" />
+</form> {% endcomment %} -->

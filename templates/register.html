@@ -1,0 +1,50 @@
+{% load static %}
+
+{% include "link.html" %}
+
+{% include 'header.html' %}
+<!-- End Header -->
+
+
+<style>
+    h5 {
+        color: red;
+    }
+    .middle {
+        text-align: center;
+    }
+</style>
+<body>
+    <section class="middle">
+        <h1>Sign Up Below</h1>
+
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+
+
+
+        <form action="register" method="POST">
+            {% csrf_token %}
+            <p>Username:</p>
+            <input type="text" name="username">
+            <p>Email:</p>
+            <input type="email" name="email">
+            <p>Password:</p>
+            <input type="password" name="password">
+            <p>Repeat Password:</p>
+            <input type="password" name="password2">
+            <br>
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+        <p> OR, Click here to <a href="login">Login</a> </p>
+        
+
+
+
+        <br><br>
+    </section>
+    {% include "footer.html" %}
+</body>

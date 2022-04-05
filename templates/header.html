@@ -1,0 +1,32 @@
+{% load static %}
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="/">BD MAlls</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/#about">About</a></li>
+                <li><a class="nav-link scrollto o" href="/#malls">Shopping Malls</a></li>
+                <li><a class="nav-link scrollto" href="/#brands">Brands</a></li>
+                {% if user.is_staff %}
+                    <li><a href="add_malls">Add malls</a></li>
+                    <li><a href="add_brands">Add brands</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/">Admin panel</a></li>
+                {% endif %}
+
+                <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+                {% comment %} edit {% endcomment %} {% if user.is_authenticated %}
+                <li><a class="getstarted scrollto" href="logout">Log Out</a></li>
+                {% else %}
+                <li><a class="getstarted scrollto" href="login">Login or Sign Up</a></li>
+                {% endif %} {% comment %} edit {% endcomment %}
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+    </div>
+</header>

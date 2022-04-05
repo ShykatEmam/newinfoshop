@@ -1,0 +1,135 @@
+{% load static %} {% include "link.html" %} {% include 'header.html' %}
+<!-- End Header -->
+<style>
+    
+    .more_details:hover{
+        
+        color:rgb(44, 111, 255); 
+        font-size:  22px;
+    }
+    .more_details{
+        color:rgb(0, 0, 0); 
+        font-size:  20px;
+    }
+
+
+</style>
+
+<body>
+    
+
+    <section>
+        <div class="container">
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+                <h3>Advertisement section</h3>
+            </div>
+            <div class="row" style="margin: 1px;">
+                
+                <div class="col-lg-2 col-md-10" style="border: 1px solid black; height:fit-content; margin-bottom: 2%;">
+                    
+                    <h3>Filter By:</h3>
+                    <hr>
+                    <div class="area">
+                        <h5>Area:</h5>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Barisal</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Chittagong </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Dhaka </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Khulna </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Mymensingh </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Rajshahi </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Sylhet</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Rangpur</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="area">
+                        <h5>Category:</h5>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">TV & Home Appliances
+                            </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Electronic Devices </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Clothes & Fashion</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Home & Lifestyle</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Health & Beauty </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Accessories </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Others</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7 col-md-10">
+                    <div class="row" style="height:fit-content; margin-bottom:10px;">
+                        <img src="/static/assets/img/brand_banner.jpg" alt="" style="height:150px;">
+
+                    </div>
+
+                    <div class="row" style="background-color:white;">
+                        {% for brand in brand_paginators %}
+                        <div class="col-lg-3 " style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 1%; text-align: center; margin-top: 1%; margin-right: 1%; margin-left: 1%; width:31%; background-color:white;">
+
+                            <img src="{{brand.image_0.url}}" class="img-fluid" alt="" style="padding-top: 5%;">
+                            <br>
+                            <br>
+                            <form action="brand_details" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" style="border: none; background-color: transparent;" name="brand_title" value="{{brand.brand_name}}">
+                                    <h6 class="more_details">{{brand.brand_name}}</h6>
+                                </button>
+                            </form>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div style="text-align: center;border: 1px solid rgba(0, 0, 0, 0.267); margin-top: 5px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px;color: white; background-color: rgb(192, 191, 191);">
+                        <!-- {{brand_paginators}}
+                        <br> Has previous: {{brand_paginators.has_previous}}
+                        <br> has next: {{brand_paginators.has_next}}
+                        <br> current: {{brand_paginators.number}}
+                        <br> number of pages: {{brand_paginators.paginator.num_pages}}
+                        <hr>
+                        <br>
+                        <br/>  -->
+                        {% if brand_paginators.has_previous %}
+                        <a href="?page=1">&laquo;First&emsp;</a>
+                        <a href="?page={{brand_paginators.previous_page_number }}">Previous&emsp;</a> {% endif %} page {{brand_paginators.number}} of {{brand_paginators.num_pages}} {% if brand_paginators.has_next%}
+                        <a href="?page={{brand_paginators.next_page_number}}">&emsp;next</a>
+                        <a href="?page={{brand_paginators.paginator.num_pages}}">&emsp;Last &raquo;</a> {% endif %}
+
+                    </div>
+
+
+                </div>
+
+                <div class=" col-lg-3 col-md-10 " style="height:fit-content; ">
+                    <div>
+                        <h4>Shopping Malls</h4>
+                        {% for shops in shops %}
+                            <div class="row highl" style="border: 1px solid 	#DCDCDC; margin: 2px;">
+                                    <form action="brand_details" method="POST">
+                                        {% csrf_token %}
+                                        
+                                        <h6 style="width:100%;display:inline-block; margin-top:5px;margin-bottom:-10px; color:blue;">
+                                            <input type="submit" value="{{shops.shopping_mall_name|truncatewords:3}}" name="brand_title" onMouseOver="this.style.color='#2E2EFF'"onMouseOut="this.style.color='#000'" style="border: none; background-color: transparent; color: black;" />
+                                        </h6>
+                                    </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 35px; padding:30px;">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+        <h3>Advertisement section</h3>
+    </div>
+
+    {% include "footer.html " %}
+
+
+</body>

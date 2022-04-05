@@ -1,0 +1,153 @@
+<section style="margin-bottom:-150px;">
+    <div class="container">
+        
+        {% for sp in sp %} {% if sp.shopping_mall_name == page_title %}
+        <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+            <h3>Advertisement section</h3>
+        </div>
+        <div class="row" style="margin: 2px;">
+            <div class="col-lg-4 col-md-6" style="border: 1px solid black; height:fit-content;">
+                <img src="{{sp.image_0.url}}" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <h4 style="text-align: center;">{{sp.shopping_mall_name}}</h4>
+                <hr>
+                <h5>Available Categories:</h5>
+                <ul>
+                    {% if sp.category_1 %}
+                    <li>{{sp.category_1}}</li>
+                    {%endif %} {% if sp.category_2 %}
+                    <li>{{sp.category_2}}</li>
+                    {%endif %} {% if sp.category_3 %}
+                    <li>{{sp.category_3}}</li>
+                    {%endif %} {% if sp.category_4 %}
+                    <li>{{sp.category_4}}</li>
+                    {%endif %} {% if sp.category_5 %}
+                    <li>{{sp.category_5}}</li>
+                    {%endif %} {% if sp.category_6 %}
+                    <li>{{sp.category_6}}</li>
+                    {%endif %} {% if sp.category_7 %}
+                    <li>{{sp.category_7}}</li>
+                    {%endif %}
+                </ul>
+                <div class="social">
+                    {% if sp.gmail_link %}
+                    <a href="{{sp.gmail_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                    <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if sp.facebook_link %}
+                    <a href="{{sp.facebook_link}}"><i class="bi bi-facebook"></i></a> {% else %}
+                    <a><i class="bi bi-facebook"></i></a> {%endif %} {% if sp.website_link %}
+                    <a href="{{sp.website_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                    <a><i class="bi bi-linkedin"></i></a> {%endif %} {% if sp.other_link %}
+                    <a href="{{sp.other_link}}"><i class="bi bi-linkedin"></i></a> {% else %}
+                    <a><i class="bi bi-linkedin"></i></a> {%endif %}
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-6 " style="border: 1px solid black;height:fit-content;">
+                <div>
+                    <h4>Related Shops: </h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right "></i> <a href="# ">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right "></i> <a href="# ">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right "></i> <a href="# ">Graphic Design</a></li>
+                    </ul>
+                </div>
+                <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                    <h4>Advertisement section</h4>
+                </div>
+            </div>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="container">
+        
+        {% for sp in sp %}
+            {% if sp.shopping_mall_name == page_title %}
+            <div class="row" style="border: 1px solid black; margin: 2px;">
+                <h3 style="text-align:center;">Advertisement section</h3>
+            </div>
+            <div class="row"  style="margin: 1px;">
+                <div class="col-lg-9 col-md-6">
+                    <div class="row desc">
+                        <h4>{{sp.shopping_mall_name}} History:</h4>
+                        <p>
+                            {{sp.description}}
+                        </p>
+                    </div>
+                    <div class="row desc">
+                        <h4>Available {{sp.shopping_mall_name}} showrooms: </h4>
+                        <table style="">
+                            <tr>
+                                <th>Showroom Description</th>
+                                <th>Contact Details</th>
+                            </tr>
+                            {% if sp.showrooms_1 %}
+                                <tr>
+                                    <td>{{sp.showrooms_1}}</td>
+                                    <td>{{sp.showrooms_phone_1}}</td>
+                                </tr>
+                            {% endif %}
+                            {% if sp.showrooms_2 %}
+                                <tr>
+                                    <td>{{sp.showrooms_2}}</td>
+                                    <td>{{sp.showrooms_phone_2}}</td>
+                                </tr>
+                            {% endif %}
+
+                        </table>
+                    </div>
+
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+                        Reviews
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 " style="border: 1px solid black;height:fit-content ">
+                    <div>
+                        <h4>Related brands:</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 10px; ">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+        {% endfor %}
+        {% for sp in sp %}
+            {% if sp.shopping_mall_name == page_title %}
+                <div class="row"  style="margin: 1px;">
+                    <h2>Other brands:</h2>
+                    {% for sps in sps %}
+                        <div class="col-lg-2 col-md-3 col-sm-2" style="border: 1px solid black; margin:5px;">
+                            <form action="brand_details" method="POST">
+                                {% csrf_token %}
+                                <img type="submit" src="{{sps.image_0.url}}" class="img-fluid" name="brand_title" alt="" value="{{sps.shopping_mall_name}}" style="padding-top:5%;">
+                            </form><form action="brand_details" method="POST">
+                                {% csrf_token %}
+                                <h4 style="text-align:center; margin-top:5px;">
+                                <input type="submit" value="{{sps.shopping_mall_name}}" name="brand_title" style="border: none; background-color: transparent;" />
+                                </h4>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</section>
