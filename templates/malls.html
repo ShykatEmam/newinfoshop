@@ -64,24 +64,19 @@
                             <li><i class="bx bx-chevron-right "></i> <a href="# ">Others</a></li>
                         </ul>
                     </div>
-
                 </div>
 
                 <div class="col-lg-7 col-md-10" style="background-color:#C0C0C0; padding: 1%; border: 1px solid rgba(0, 0, 0, 0.267);">
                     <div class="row" style="height:fit-content; margin-bottom:10px;">
                         <img src="/static/assets/img/brand_banner.jpg" alt="" style="height:150px;">
-
                     </div>
-
                     {% for mall in mall_paginators %}
                     <div class="row" style="background-color:white; border: 1px solid rgba(0, 0, 0, 0.267); margin:1px; border-radius: 25px;">
                         <div class="col-lg-5 " style=" background-color:gray;">
 
                             <img src="{{mall.image_0.url}}" class="img-fluid" alt="" style="padding: 2%;">
-
                         </div>
                         <div class="col-lg-7 " style="background-color:white;">
-                            
                             <div class="row">
                                 <form action="brand_details" method="POST">
                                     {% csrf_token %}
@@ -90,11 +85,9 @@
                                     </button>
                                 </form>
                             </div>
-
                                 <h6>
                                     ({{mall.division}})
                                 </h6>
-
                             <div class="row" style="width:250px;">
                                 <p>
                                     {{mall.address}}
@@ -102,7 +95,6 @@
                             </div>
                             <h5 style="margin-top:-3%;"><u>Contact:</u></h5>
                             <div class="row" style="margin-left:5%; margin-top:-5%;">
-                                
                                     <p >
                                         <ul>
                                             {% if mall.phone_1 %}
@@ -116,13 +108,10 @@
                                             {%endif %}
                                         </ul>
                                     </p>
-
-                                
-                                
                             </div>
-                            <form action="shop_details" method="POST"style="margin-top:-3%;">
+                            <form action="brand_details" method="POST"style="margin-top:-3%;">
                                 {% csrf_token %}
-                                <button type="submit" style="border: none; background-color: transparent;" name="mall_title" value="{{mall.shopping_mall_name}}">
+                                <button type="submit" style="border: none; background-color: transparent;" name="brand_title" value="{{mall.shopping_mall_name}}">
                                     <h6 class="more_details">More details....</h6>
                                 </button>
                             </form>
@@ -133,10 +122,6 @@
 
                     <div style="text-align: center;border: 1px solid rgba(0, 0, 0, 0.267); margin-top: 5px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px;color: white; background-color: rgb(192, 191, 191);">
 
-                        <br> Has previous: {{mall_paginators.has_previous}}
-                        <br> has next: {{mall_paginators.has_next}}
-                        <br> current: {{mall_paginators.number}}
-                        <br> number of pages: {{mall_paginators.paginator.num_pages}}
                         <hr>
                         <br>
                         <br/>
