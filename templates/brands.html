@@ -1,7 +1,6 @@
 {% load static %} {% include "link.html" %} {% include 'header.html' %}
 <!-- End Header -->
 <style>
-    
     .more_details:hover{
         
         color:rgb(44, 111, 255); 
@@ -11,7 +10,6 @@
         color:rgb(0, 0, 0); 
         font-size:  20px;
     }
-
 
 </style>
 
@@ -66,7 +64,6 @@
                     <div class="row" style="background-color:white;">
                         {% for brand in brand_paginators %}
                         <div class="col-lg-3 " style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 1%; text-align: center; margin-top: 1%; margin-right: 1%; margin-left: 1%; width:31%; background-color:white;">
-
                             <img src="{{brand.image_0.url}}" class="img-fluid" alt="" style="padding-top: 5%;">
                             <br>
                             <br>
@@ -95,7 +92,6 @@
                         <a href="?page={{brand_paginators.paginator.num_pages}}">&emsp;Last &raquo;</a> {% endif %}
 
                     </div>
-
 
                 </div>
 
@@ -128,6 +124,5 @@
     </div>
 
     {% include "footer.html " %}
-
 
 </body>

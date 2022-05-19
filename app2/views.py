@@ -73,7 +73,6 @@ def counter(request):
 def post(request,pk):
     return render(request,'post.html',{'pk': pk})
 
-
 def add_malls(request):
     if  request.method == 'POST':
         shopping_mall_name = request.POST['mall_name']
@@ -179,8 +178,6 @@ def brand_details(request):
     spitems = list(ShoppingMalls.objects.all())
     sps = random.sample(spitems,5)
     sps2 = random.sample(spitems,6)
-
-
 
     return render(request,'brand_details.html',{'pk':pk,'page_title':page_title,'pks':pks,'sp':sp,'sps':sps,'sps2':sps2,'pks2':pks2})
 

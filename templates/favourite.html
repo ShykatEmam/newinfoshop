@@ -1,4 +1,78 @@
 {% load static %} {% include "link.html" %} {% include 'header.html' %}
 <!-- End Header -->
 
-Favourite something...
+<body>
+    <section>
+        <div class="container">
+            <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+                <h3>Advertisement section</h3>
+            </div>
+            <div class="row" style="margin: 1px;">
+
+                <div class="col-lg-2 col-md-10" style="border: 1px solid black; height:fit-content; margin-bottom: 2%;">
+
+                    <h3>Filter By:</h3>
+                    <hr>
+                    <div class="area">
+                        <h5>Area:</h5>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Barisal</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Chittagong </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Dhaka </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Khulna </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Mymensingh </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Rajshahi </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Sylhet</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Rangpur</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="area">
+                        <h5>Category:</h5>
+                        <ul>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">TV & Home Appliances
+                            </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Electronic Devices </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Clothes & Fashion</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Home & Lifestyle</a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Health & Beauty </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Accessories </a></li>
+                            <li><i class="bx bx-chevron-right "></i> <a href="# ">Others</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7 col-md-10">
+                    <div class="row" style="height:fit-content; margin-bottom:10px;">
+                        <img src="/static/assets/img/brand_banner.jpg" alt="" style="height:150px;">
+                    </div>
+                    <div class="row" style="background-color:white;">
+                        {% for i in '12' %} {% for j in '123456' %}
+                        <div class="col-lg-3 " style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 1%; text-align: center; margin-top: 1%; margin-right: 1%; margin-left: 1%; width:31%; background-color:white;">
+                            <h1>This is some favourite things.</h1>
+                        </div>
+
+                        {% endfor %}
+                        <div class="col-lg-3 " style="border: 1px solid rgba(0, 0, 0, 0.267); margin-bottom: 1%; text-align: center; margin-top: 1%; margin-right: 1%; margin-left: 1%; width:31%; background-color:white;">
+                            <h1>Ends here.</h1>
+                        </div>
+                        <br> {% endfor %}
+                    </div>
+                </div>
+
+                <div class=" col-lg-3 col-md-10 " style="height:fit-content; border: 1px solid rgba(0, 0, 0, 0.267);">
+                    <div class="row">
+                        <h4>Shopping Malls</h4>
+                    </div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 35px; padding:30px;">
+                        <h4>Advertisement section</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="border: 1px solid rgba(0, 0, 0, 0.267); margin: 5px; text-align: center;">
+            <h3>Advertisement section</h3>
+        </div>
+    </section>
+</body>
