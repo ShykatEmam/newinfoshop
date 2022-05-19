@@ -293,17 +293,16 @@
                 </div>
                 <br>
 
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
+                {% comment %} <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
 
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_1">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_1%}
-                                
+                            {% if brand.category_1%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-                                            {% comment %} <p style="color:white; font-size:  12px;">Aslo has: {{brand.category_2}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_6}}, {{brand.category_7}} </p> {% endcomment %}
+                                            <p style="color:white; font-size:  12px;">Aslo has: {{brand.category_2}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_6}}, {{brand.category_7}} </p>
 
                                             <br>
                                             <form action="brand_details" method="POST">
@@ -325,14 +324,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_2">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_2%}
+                            {% if brand.category_2%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_6}}, {{brand.category_7}}</p>{% endcomment %}
-                                            
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -353,14 +349,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_3">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_3%}
+                            {% if brand.category_3%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-        
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_2}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_6}}, {{brand.category_7}}</p> {% endcomment %}
-                                  
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -381,14 +374,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_4">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_4%}
+                            {% if brand.category_4%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-                                            
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_2}}, {{brand.category_3}}, {{brand.category_5}}, {{brand.category_6}}, {{brand.category_7}}</p> {% endcomment %}
-                  
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -409,14 +399,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_5">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_5%}
+                            {% if brand.category_5%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-                                            
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_2}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_6}}, {{brand.category_7}}</p> {% endcomment %}
-
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -437,14 +424,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_6">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_6%}
+                            {% if brand.category_6%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-                                            
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_2}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_7}}</p> {% endcomment %}
-
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -465,14 +449,11 @@
                     </div>
                     <div class="col-lg-12 col-md-6 portfolio-item filter-category_7">
                         {% for brand in brands%}
-                            {% if forloop.counter < 7 %}  
-                                {% if brand.category_7%}
+                            {% if brand.category_7%}
+                                {% if forloop.counter < 7 %}  
                                     <div class="portfolio-wrap">
                                         <img src="{{brand.image_0.url}}" class="img-fluid" alt="">
                                         <div class="portfolio-info"><br><br>
-                                           
-                                            {% comment %} <p> Other categories: {{brand.category_1}}, {{brand.category_2}}, {{brand.category_3}}, {{brand.category_4}}, {{brand.category_5}}, {{brand.category_6}}</p> {% endcomment %}
-
                                             <br>
                                             <form action="brand_details" method="POST">
                                                 {% csrf_token %}
@@ -494,7 +475,7 @@
                         
                     </div>
 
-                </div>
+                </div> {% endcomment %}
                 <div class="see_all_button">
                     <a href="brands" ><h3 style="text-align: center;">See all........</h3></a>
                 </div>

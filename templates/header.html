@@ -8,10 +8,19 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                <li><a class="nav-link scrollto o" href="/#malls">Shopping Malls</a></li>
-                <li><a class="nav-link scrollto" href="/#brands">Brands</a></li>
                 {% if user.is_staff %}
+                {%else%}
+                    
+                    <li><a class="nav-link scrollto" href="/#about">About</a></li>
+                    <li><a class="nav-link scrollto o" href="/#malls">Shopping Malls</a></li>
+                    <li><a class="nav-link scrollto" href="/#brands">Brands</a></li>
+                    <li><a class="nav-link scrollto" href="/favourite">Favourties</a></li>
+                    <li><a class="nav-link scrollto" href="/#brands">Brands</a></li>
+
+                {% endif %}
+                {% if user.is_staff %}
+                
+                    <li><a class="nav-link scrollto" href="/#">Home</a></li>
                     <li><a href="add_malls">Add malls</a></li>
                     <li><a href="add_brands">Add brands</a></li>
                     <li><a href="http://127.0.0.1:8000/admin/">Admin panel</a></li>

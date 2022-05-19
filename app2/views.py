@@ -170,10 +170,6 @@ def brand_details(request):
     
     if  request.method == 'POST':
         page_title = request.POST['brand_title']
-
-
-
-
     pk = Brands.objects.all()
     items = list(Brands.objects.all())
     pks = random.sample(items,5)
@@ -269,3 +265,6 @@ def add_brands(request):
     else:
         messages.info(request,'Add correct data!!!')
         return render(request,'add_brands.html')
+
+def favourite(request):
+    return render(request, 'favourite.html')

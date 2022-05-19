@@ -13,5 +13,6 @@ urlpatterns = [
     path('add_brands', views.add_brands, name='add_brands'),
     path('malls', views.malls, name='malls'),
     path('brands', views.brands, name='brands'),
+    path('favourite', views.favourite, name='favourite'), 
     
 ]
